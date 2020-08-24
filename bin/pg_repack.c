@@ -838,8 +838,8 @@ repack_one_database(const char *orderby, const char *deletekey, char *errbuf, si
 		{
 			/* User specified WHERE clause */
 			/* This will cause a bulk delete to happen for the specified table. */
-      appendStringInfoString(&sql, " WHERE ");
-      appendStringInfoString(&sql, deletekey);
+      appendStringInfoString(&copy_sql, " WHERE ");
+      appendStringInfoString(&copy_sql, deletekey);
       table.create_table = sql.data;	
 	  }
     
